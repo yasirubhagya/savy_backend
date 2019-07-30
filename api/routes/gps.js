@@ -6,12 +6,12 @@ const gpsController = require('../controllers/gpsController');
 
 
 
-gpsRouter.get('/getAll',checkAuth,gpsController.gps_get_all);
+gpsRouter.get('/getAll',gpsController.gps_get_all);
 
 
-gpsRouter.get('/getById',checkAuth,gpsController.gps_get_byTrackerId);
+gpsRouter.get('/getById',gpsController.gps_get_byTrackerId);
 
-gpsRouter.get('/getById/live',checkAuth,gpsController.gps_get_live_byTrackerId);
+gpsRouter.get('/getById/live',gpsController.gps_get_live_byTrackerId);
 
 gpsRouter.get('/gps.json/:trackerId/:uDate/:latitude/:longitude/:speed/:battery',gpsController.gps_add);
 
