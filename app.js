@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 const mainRoutes =require('./mainroutes');
 
 
-mongoose.connect('mongodb://greentrack:kFOyhL2VV2n23JxF@greentrack-shard-00-00-hkfzd.mongodb.net:27017,greentrack-shard-00-01-hkfzd.mongodb.net:27017,greentrack-shard-00-02-hkfzd.mongodb.net:27017/greentrack?ssl=true&replicaSet=greentrack-shard-0&authSource=admin&retryWrites=true',
+mongoose.connect('mongodb+srv://savy:123@cluster0-bsqiz.mongodb.net/test?retryWrites=true&w=majority',
     { useNewUrlParser: true }
 );
 mongoose.Promise=global.Promise;

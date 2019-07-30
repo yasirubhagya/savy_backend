@@ -6,18 +6,9 @@ const gpsSchema = mongoose.Schema({
         type:String,
         required:true
     },
-    uDate:{
+    dateTime:{
         type:Date,
         required:true
-    },
-    aDate:{
-        type:Date,
-        required:true
-    },
-    uTime:{
-        type:Number,
-        required:true
-        
     },
     latitude:{
         type:Number,
@@ -26,16 +17,7 @@ const gpsSchema = mongoose.Schema({
     longitude:{
         type:Number,
         required:true
-    },
-    speed:{
-         type:Number,
-        required:true
-    },
-    battery:{
-        type:Boolean,
-        required:true
     }
-
 });
 
 
