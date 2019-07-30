@@ -43,7 +43,7 @@ exports.gps_get_live_byTrackerId = (req, res, next) => {
 exports.gps_add = (req, res, next) => {
     let newGps = new gps({
         trackerId: req.params.trackerId,
-        date: new Date(req.params.date),
+        dateTime: new Date(req.params.date),
         latitude:  req.params.latitude,
         longitude: req.params.longitude,
     });
