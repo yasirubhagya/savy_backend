@@ -44,7 +44,7 @@ exports.gps_add = (req, res, next) => {
     let newGps = new gps({
         trackerId: req.params.trackerId,
         date: new Date(req.params.date),
-        latitude: req.params.latitude,
+        latitude:  req.params.latitude,
         longitude: req.params.longitude,
     });
     newGps.save()
@@ -52,7 +52,7 @@ exports.gps_add = (req, res, next) => {
             res.status(200).json("ok");
         })
         .catch(err => {
-                res.status(500).json({ msg: 'failed' });
+                res.status(500).json({ msg: err });
         });
 
 }
