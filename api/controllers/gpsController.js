@@ -1,7 +1,4 @@
 const gps = require('../models/gpsModel');
-const routeStat = require('../models/route_statModel');
-const route = require('../models/routeModel');
-const driver = require('../models/driverModel');
 const turf = require('@turf/turf');
 
 
