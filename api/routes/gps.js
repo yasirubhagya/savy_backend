@@ -13,6 +13,6 @@ gpsRouter.get('/getById/:Id',gpsController.gps_get_byTrackerId);
 
 gpsRouter.get('/getById/:Id/live',gpsController.gps_get_live_byTrackerId);
 
-gpsRouter.get('/gps.json/:trackerId/:uDate/:latitude/:longitude/:speed/:battery',gpsController.gps_add);
+gpsRouter.get('/add/:trackerId/:date/:latitude/:longitude',gpsController.gps_add);
 
 module.exports = gpsRouter;

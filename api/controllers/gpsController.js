@@ -16,7 +16,7 @@ exports.gps_get_all = (req, res, next) => {
 
 exports.gps_get_byTrackerId = (req, res, next) => {
 
-    gps.find({ trackerId: req.params.Id },{ latitude: 1, longitude: 1, _id: 0 }).sort({ "uDate": -1 }).limit(500).exec()
+    gps.find({ trackerId: req.params.Id },{ latitude: 1, longitude: 1, _id: 0,date:1 }).sort({ "date": -1 }).limit(500).exec()
     .then(result=>{
         res.status(200).json(result);
     })
@@ -29,7 +29,7 @@ exports.gps_get_byTrackerId = (req, res, next) => {
 
 exports.gps_get_live_byTrackerId = (req, res, next) => {
 
-    gps.find({ trackerId: req.params.Id }, { latitude: 1, longitude: 1, _id: 0 }).sort({ "uDate": -1 }).limit(1).exec()
+    gps.find({ trackerId: req.params.Id }, { latitude: 1, longitude: 1, _id: 0,date:1 }).sort({ "date": -1 }).limit(1).exec()
     .then(result=>{
         res.status(200).json(result);
     })
