@@ -32,4 +32,4 @@ const gpsSchema = mongoose.Schema({
 });
 
 
-module.exports = mongoose.model('gps', gpsSchema);
+module.exports = mongoose.model('GpsImuData', gpsSchema);
